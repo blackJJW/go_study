@@ -20,6 +20,21 @@ func repeatMe(words ...string) {
 	fmt.Println(words)
 }
 
+func superAdd(numbers ...int) int {
+	for index, number := range numbers {
+		fmt.Println(index, number)
+	}
+	for i := 0; i < len(numbers); i++ {
+		fmt.Println(numbers[i])
+	}
+
+	total := 0
+	for _, number := range numbers {
+		total += number
+	}
+	return total
+}
+
 func main() {
 	fmt.Println("Hello World")
 
@@ -37,4 +52,7 @@ func main() {
 	fmt.Println(totalLength, up)
 
 	repeatMe("ABC", "DEF", "GHI")
+
+	result := superAdd(1, 2, 3, 4, 5, 6, 7, 8, 9)
+	fmt.Println(result)
 }
